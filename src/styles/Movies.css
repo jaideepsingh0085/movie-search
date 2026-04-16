@@ -1,0 +1,88 @@
+.Movies {
+  margin: auto;
+  width: 220px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.movie-img-wrapper {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 6px;
+}
+
+.movie-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.Movies:hover .movie-img-wrapper img {
+  transform: scale(1.05);
+}
+
+.movie-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  gap: 10px;
+}
+
+.Movies:hover .movie-overlay {
+  opacity: 1;
+}
+
+.overlay-label {
+  color: #fff;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border: 1.5px solid #fff;
+  padding: 5px 14px;
+  border-radius: 20px;
+}
+
+.bookmark-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1.5px solid rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  width: 38px;
+  height: 38px;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  color: #fff;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.bookmark-btn:hover,
+.bookmark-btn.saved {
+  background: #3434bb;
+  border-color: #3434bb;
+}
+
+.movie-title {
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  margin-top: 8px;
+  font-size: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.movie-year {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  margin-top: 2px;
+}

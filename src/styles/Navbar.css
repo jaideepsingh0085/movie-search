@@ -1,0 +1,84 @@
+.Navbar {
+  width: 100%;
+  background-color: #0B1320;
+  box-shadow: 0 5px 15px rgba(77, 163, 255, 0.4);
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 998px;
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.container a {
+  text-decoration: none;
+}
+
+.container h1 {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 25px;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.go-home {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: #3434bb;
+  padding: 5px 15px;
+  border-radius: 30px;
+}
+
+.go-home svg {
+  margin-right: 5px;
+}
+
+.watchlist-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 5px 14px;
+  border-radius: 30px;
+  font-size: 14px;
+  text-decoration: none;
+  transition: background 0.2s;
+  position: relative;
+}
+
+.watchlist-btn:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.watchlist-count {
+  background: #3434bb;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+
+@media (max-width: 576px) {
+  .container {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .container h1 {
+    margin-bottom: 0;
+  }
+}
